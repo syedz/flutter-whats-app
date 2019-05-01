@@ -28,6 +28,13 @@ class App extends StatelessWidget {
                 new Tab(text: 'CALLS'),
               ],
             ),
+            actions: <Widget>[
+              new Icon(Icons.search),
+              new Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5.0),
+              ),
+              new Icon(Icons.more_vert),
+            ],
           ),
           body: new TabBarView(
             children: <Widget>[
@@ -39,7 +46,10 @@ class App extends StatelessWidget {
           ),
           floatingActionButton: new FloatingActionButton(
             backgroundColor: Theme.of(context).accentColor,
-            child: new Icon(Icons.message),
+            child: new Icon(
+              Icons.message,
+              color: Colors.white,
+            ),
             onPressed: () => print('open chats'),
           ),
         ),
